@@ -24,8 +24,8 @@ module.exports = {
                 }
             },
             {
-                test: /\.css$/i,
-                use: ['style-loader', 'css-loader'],
+                test: /\.(sc|sa|c)ss$/i,
+                use: ['style-loader', 'css-loader', 'sass-loader'],
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif|ico|json)$/i,
@@ -33,7 +33,7 @@ module.exports = {
             }
         ]
     },
-    devServer : {
+    devServer: {
         port: 3210,
         historyApiFallback: true
     }
